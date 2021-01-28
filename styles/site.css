@@ -2,5 +2,52 @@
 }
 
 a{
-    color: #00FFFF;
+    color: #FA0;
+}
+
+ul, ol {
+    border: 2px solid #F00;
+    padding: 0;
+    margin: 40px;
+    position: relative;
+}
+
+li{
+    border: 2px solid #00F;
+    /*display: inline;*/
+    /*margin: .2em;*/
+}
+
+ol li{
+    display:block;
+    
+}
+
+p{
+    border: 5px solid #0F0;
+    /*display:none;*/
+}
+
+p#description{
+    background-color: #AAA;
+}
+
+.homework{
+    background-color: #AFA;
+    border-color: #080;
+}
+
+span.language{
+    border: 2px solid #000;
+/*    position: absolute;
+    top: 0px;
+    left: 0;*/
+    position: relative;
+    top: .3em;
+    font-size: .5em;
+    
+/*    position: fixed;
+    bottom: 30px;*/
+
+        color: #AAA;
 }
