@@ -26,6 +26,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "2021 Spring", ".", "{9B6384
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0A83DF63-80F3-4A25-9EF8-FEADF1A1A68C}"
 	ProjectSection(SolutionItems) = preProject
+		scripts.html = scripts.html
 		syllabus.html = syllabus.html
 	EndProjectSection
 EndProject
