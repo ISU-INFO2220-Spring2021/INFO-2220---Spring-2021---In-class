@@ -4,6 +4,11 @@
     <meta charset="utf-8" />
     <title>DOM page</title>
     <script defer src="scripts/dom.js"></script>
+    <style>
+        table, td {
+            border: 1px solid #000;
+        }
+    </style>
 </head>
 <body>
     <div id="myDiv">
@@ -15,10 +20,29 @@
             <th>Content</th>
         </tr>
         <tr>
-            <td>InnerText</td>
-            <td id="tdInnerText"></td>
+            <td data-course="INFO 2220">InnerText</td>
+            <td id="tdInnerText">
+            </td>
+        </tr>
+        <tr>
+            <td data-course="INFO 2220">Buttons</td>
+            <td>
+                <button data-name="frank" data-role="admin" onclick="btnClicked(this);">
+                    Frank
+                </button><button onclick="btnClicked(this);">Asim</button>
+            </td>
         </tr>
     </table>
+    <button id="btnBob" data-name="sally" onclick="btnClicked(this);">
+        Sally
+    </button>
+
+    Stuff
+
+    <p>Hello</p>
+
+
+
 
 </body>
 </html>
