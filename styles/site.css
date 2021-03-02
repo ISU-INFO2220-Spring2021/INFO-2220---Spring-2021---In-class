@@ -1,7 +1,7 @@
 ﻿body {
 }
 
-#syllabus p{
+#syllabus p {
     background-color: #0EF;
 }
 
@@ -10,7 +10,7 @@
     border-color: #080;
 }
 
-a{
+a {
     color: #FA0;
 }
 
@@ -21,38 +21,44 @@ ul, ol {
     position: relative;
 }
 
-li{
+li {
     border: 2px solid #00F;
     /*display: inline;*/
     /*margin: .2em;*/
 }
 
-ol li{
-    display:block;
-    
+ol li {
+    display: block;
 }
 
-p{
+p {
     border: 5px solid #0F0;
     /*display:none;*/
 }
 
-p#description{
-    background-color: #AAA;
-}
+    p#description {
+        background-color: #AAA;
+    }
 
 
-span.language{
+span.language {
     border: 2px solid #000;
-/*    position: absolute;
+    /*    position: absolute;
     top: 0px;
     left: 0;*/
     position: relative;
     top: .3em;
     font-size: .5em;
-    
-/*    position: fixed;
+    /*    position: fixed;
     bottom: 30px;*/
-
-        color: #AAA;
+    color: #AAA;
 }
+
+p {
+    /*margin: 1em;*/
+}
+
+    .hovered, p:hover {
+        background-color: #AAA;
+        /*margin: 0;*/
+    }
