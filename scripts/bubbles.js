@@ -12,28 +12,28 @@
         return false;
     };
 
-    //obj.onmouseover = function (evt) {
-    //    evt = evt || window.event;
-    //    var tar = evt.target || evt.srcElement;
-    //    //alert(typeof evt);
-    //    if (tar.tagName == "P") {
-    //        tar.className = "hovered";
-    //    }
-    //};
+    obj.onmouseover = function (evt) {
+        evt = evt || window.event;
+        var tar = evt.target || evt.srcElement;
+        //alert(typeof evt);
+        if (tar.tagName == "P") {
+            tar.className = "hovered";
+        }
+    };
 
 
-    //var paras = document.getElementsByTagName("p");
-    //for (var i = 0; i < paras.length; i++) {
-    //    var par = paras[i];
-    //    par.onmouseover = function () {
-    //        this.className = "hovered";
-    //        //alert("I entered a Paragraph;")
-    //    };
-    //    par.onmouseleave = function () {
-    //        this.className = "";
-    //        //alert("I entered a Paragraph;")
-    //    };
-    //}
+    var paras = document.getElementsByTagName("p");
+    for (var i = 0; i < paras.length; i++) {
+        var par = paras[i];
+        par.onmouseover = function () {
+            this.className = "hovered";
+            //alert("I entered a Paragraph;")
+        };
+        par.onmouseleave = function () {
+            this.className = "";
+            //alert("I entered a Paragraph;")
+        };
+    }
 };
 
 
