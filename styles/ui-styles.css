@@ -1,0 +1,7 @@
+﻿.ui-draggable:hover{
+    cursor: move;
+}
+
+#divResizeMe{
+    border: 2px solid #000;
+}
