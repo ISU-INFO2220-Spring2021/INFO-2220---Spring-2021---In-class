@@ -12,7 +12,11 @@
     <link href="styles/ui-styles.css" rel="stylesheet" />
 </head>
 <body>
-
+    <div id="shadowBox" >
+        <div id="modal">
+            This is a modal.
+        </div>
+    </div>
     <div id="divResizeMe">
         <p>Hello</p>
     </div>
@@ -81,13 +85,17 @@
         <legend>Rental Car</legend>
         <div id="controlgroup">
             <select id="car-type">
-                <option>Compact car</option>
-                <option>Midsize car</option>
-                <option>Full size car</option>
-                <option>SUV</option>
-                <option>Luxury</option>
-                <option>Truck</option>
-                <option>Van</option>
+                <optgroup label="Cars">
+                    <option>Compact car</option>
+                    <option>Midsize car</option>
+                    <option>Full size car</option>
+                </optgroup>
+                <optgroup label="Trucks">
+                    <option>SUV</option>
+                    <option>Luxury</option>
+                    <option>Truck</option>
+                    <option>Van</option>
+                    </optgroup>
             </select>
             <label for="transmission-standard">Standard</label>
             <input type="radio" name="transmission" id="transmission-standard">
@@ -95,6 +103,8 @@
             <input type="radio" name="transmission" id="transmission-automatic">
             <label for="insurance">Insurance</label>
             <input type="checkbox" name="insurance" id="insurance">
+            <label for="delivery">Delivered</label>
+            <input type="checkbox" name="delivertocustomer" id="delivery">
             <label for="horizontal-spinner" class="ui-controlgroup-label"># of cars</label>
             <input id="horizontal-spinner" class="ui-spinner-input">
             <button>Book Now!</button>
@@ -113,7 +123,7 @@
         </ul>
         <div id="tabs-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
         <div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
-        <div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+        <div id="tabs-3">Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a,Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
     </div>
 
 
@@ -123,13 +133,16 @@
         <button id="dialog-link" class="ui-button ui-corner-all ui-widget">
             <span class="ui-icon ui-icon-newwin"></span>Open Dialog
         </button>
+        <div id="dialog-message" title="This is the title">
+Hello Class. Content
+        </div>
     </p>
 
     <h2 class="demoHeaders">Overlay and Shadow Classes</h2>
     <!--<div style="position: relative; width: 96%; height: 200px; padding:1% 2%; overflow:hidden;" class="fakewindowcontain">
-        <p>Lorem ipsum dolor sit amet,  Nulla nec tortor. Donec id elit quis purus consectetur consequat. </p><p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. </p><p>Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. </p><p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. </p><p>Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. </p><p>Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. </p>-->
-    <!-- ui-dialog -->
-    <!--<div class="ui-widget-overlay ui-front"></div>
+        <p>Lorem ipsum dolor sit amet,  Nulla nec tortor. Donec id elit quis purus consectetur consequat. </p><p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. </p><p>Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. </p><p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. </p><p>Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. </p><p>Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. </p>
+     ui-dialog 
+    <div class="ui-widget-overlay ui-front"></div>
         <div style="position: absolute; width: 320px; left: 50px; top: 30px; padding: 1.2em" class="ui-widget ui-front ui-widget-content ui-corner-all ui-widget-shadow">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </div>
@@ -174,7 +187,7 @@
 
     <!-- Spinner -->
     <h2 class="demoHeaders">Spinner</h2>
-    <input id="spinner">
+    <input id="spinner" title="Spin for a value" value="3">
 
 
 
@@ -182,7 +195,12 @@
     <h2 class="demoHeaders">Menu</h2>
     <ul style="width:100px;" id="menu">
         <li><div>Item 1</div></li>
-        <li><div>Item 2</div></li>
+        <li><div>Item 2</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jquery.html">Jquery</a></li>
+            </ul>
+        </li>
         <li>
             <div>Item 3</div>
             <ul>
