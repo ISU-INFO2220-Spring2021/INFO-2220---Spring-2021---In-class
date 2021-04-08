@@ -4,5 +4,11 @@
     "inputFiles": [
       "scripts/bubbles.js"
     ]
+  },
+  {
+    "outputFileName": "scripts/typedemo.min.js",
+    "inputFiles": [
+      "scripts/typedemo.js"
+    ]
   }
 ]

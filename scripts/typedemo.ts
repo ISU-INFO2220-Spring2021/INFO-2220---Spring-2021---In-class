@@ -66,6 +66,128 @@ var bob:Student = new Student("Bob");
 
 var sally: Assistant;
 sally = new Assistant("Sally");
-alert(sally.Name);
+//alert(sally.Name);
 
-alert(bob.Name);
+//alert(bob.Name);
+
+//alert((bob instanceof Assistant) + " | " +
+//    (bob instanceof Student))
+
+//alert((sally instanceof Assistant) + " | " +
+//    (sally instanceof Student))
+
+interface IMagical {
+    castSpell():void;
+    sayMagicWords():string;
+}
+
+class Wizard implements IMagical {
+    public hatColor;
+
+    spin() {
+        return "cycle it";
+    };
+
+    castSpell():void { this.hatColor = "green" }
+    sayMagicWords():string { return "1234";}
+}
+
+class Witch implements IMagical {
+    public broom = "straw";
+
+    castSpell(): void { this.broom = "hay" }
+    sayMagicWords(): string {
+        return "ShaZam!";
+    }
+}
+
+
+var harry = new Wizard();
+harry.spin();
+//alert(harry.hatColor);
+//harry.castSpell();
+////alert(harry.hatColor);
+//alert(harry.sayMagicWords());
+
+var harrietta = new Witch();
+
+var magicArr: IMagical[] = [];
+magicArr.push(harry);
+magicArr.push(harrietta);
+magicArr.push(new Wizard());
+
+//for (var mUser of magicArr){
+//    alert(mUser.sayMagicWords());
+//}
+
+var fruit: string = "Apple";
+var number: number = 5;
+
+var saying = `a
+I like to eat ${fruit}.
+I like to "eat" ${number} of them.
+e`;
+
+//alert(saying);
+
+//enum Attitudes {
+//        Fiesty = 6,
+//        Lazy = 3,
+//        Onery = 7,
+//        Sleepy
+//}
+
+//class Cat {
+//    public attitude: Attitudes;
+//    public name: string;
+
+//    constructor(nm: string, att: Attitudes) {
+//        this.name = nm;
+//        this.attitude = att;
+//    }
+//}
+
+//var felix = new Cat("Felix", Attitudes.Onery);
+
+enum SwitchState {
+    Off = 0,
+    On = 100,
+    Dimmed = 50,
+    MostlyDimmed = 30
+}
+
+
+class Switch {
+    private name: string;
+    /// States: 
+    /// 0 : off
+    /// 1 : on
+    private state: SwitchState;
+    constructor(nm:string,state:SwitchState) {
+        this.name = nm;
+        this.state = state;
+    }
+
+    getLevel() {
+        return this.state;
+    }
+
+}
+
+
+var swArr: Switch[] = [];
+swArr.push(new Switch("Front Room",SwitchState.On));
+swArr.push(new Switch("Living Room", SwitchState.Off));
+swArr.push(new Switch("Kitchen", SwitchState.Dimmed));
+swArr.push(new Switch("Bedroom", SwitchState.MostlyDimmed));
+swArr.push(new Switch("Bathroom", SwitchState.Off));
+
+//alert(swArr[0].getLevel());
+for (var sw of swArr) {
+    if (sw.getLevel() == SwitchState.On) {
+        document.getElementById("").innerText += sw.getLevel();
+    }
+}
+
+var myOtherNum: number = 67;
+
