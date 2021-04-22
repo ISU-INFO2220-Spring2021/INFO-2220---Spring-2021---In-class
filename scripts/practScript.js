@@ -12,6 +12,8 @@ $(document).ready(function () {
     });
 
     $("#btnMore").on("click", doThis);
+
+    setBubbling();
 });
 
 function clearLinks() {
@@ -64,3 +66,60 @@ function moveText() {
     t.text(p.text());
     p.text("");
 }
+
+function setBubbling(){
+    var bub = document.getElementById("bubbling");
+    bub.onclick = function(evt){
+        evt = evt || window.event;
+        var whatHandles = evt.currentTarget;
+        var whatWasClicked = evt.target || evt.srcElement;
+
+        alert(whatHandles.tagName + " | " + whatWasClicked.tagName);
+        if(whatWasClicked.tagName == "SPAN"){
+            //alert(whatWasClicked.className);
+            if (whatWasClicked.className.indexOf("notme") < 0){
+                    // clickable
+                    alert("I was clicked.");
+            }
+            //alert("a span was clicked");
+        }
+
+        //alert(evt.currentTarget.tagName);
+        //saySomething(evt);
+//        alert("I was clicked");
+    };
+
+    var stopB = document.getElementById("stopit");
+    stopB.onclick = function(evt){
+        evt = evt || window.event;
+        var whatHandles = evt.currentTarget;
+        var whatWasClicked = evt.target || evt.srcElement;
+
+        alert(whatHandles.tagName + " | " + whatWasClicked.tagName);
+        evt.cancelBubble = true;
+        evt.stopPropagation();
+        //return false;
+    }
+
+    var hyp = bub.getElementsByTagName("a")[0];
+    hyp.onclick = function(evt){
+        evt = evt || window.event;
+        alert("hyp clicked");
+        evt.cancelBubble = true;
+        evt.stopPropagation();
+        return false;
+    };
+
+}
+
+function saySomething(e){
+    alert(this);
+    alert(e.currentTarget.tagName);
+}
+
+function Meal(){
+    this.say = saySomething;
+}
+
+// var myMeal = new Meal();
+// myMeal.say();

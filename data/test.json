@@ -1,8 +1,28 @@
 [
-    {"title":"Oz"},
-    {"title":"Hatchet"},
-    {"title":"Good Stuff"},
-    {"title":"Dune"},
-    {"title":"Magic"},
-    {"title":"Happiness"}
+    {
+        "title": "Oz",
+        "topic": [
+            "magic",
+            "far away lands"
+        ],
+        "author": {
+            "firstname": "Bob",
+            "lastname": "Writes"
+        }
+    },
+    {
+        "title": "Hatchet"
+    },
+    {
+        "title": "Good Stuff"
+    },
+    {
+        "title": "Dune"
+    },
+    {
+        "title": "Magic"
+    },
+    {
+        "title": "Happiness"
+    }
 ]
