@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <title>Practice Challenges</title>
     <meta charset="utf-8" />
@@ -19,7 +20,7 @@
             color: #A0A;
         }
 
-        #parenting * {
+        #parenting *, #bubbling * {
             padding: 1em;
         }
 
@@ -31,11 +32,12 @@
             border: solid 2px #0A0;
         }
 
-        #parenting div {
+        #parenting div, #bubbling div {
             border: solid 2px #F60;
         }
     </style>
 </head>
+
 <body>
     <h1>
         Practice Challenges for the exam.
@@ -89,6 +91,17 @@
             </p>
         </div>
     </section>
+    <section id="bubbling">
+        <div>
+            <p>
+                <span>Click Me</span>
+                <span>or me.</span>
+                <span class="notme">but not me.</span>
+                <span id="stopit">Stop Bubbles</span>
+                <a href="index.html">Go Home</a>
+            </p>
+        </div>
+    </section>
 
     <p id="someText">
         <span>This is a sentence.</span>
@@ -100,4 +113,5 @@
 
 
 </body>
+
 </html>
